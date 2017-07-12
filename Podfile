@@ -11,4 +11,7 @@ target 'Interviewer' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod ‘FBSDKCoreKit’
+  pod ‘FBSDKShareKit’ 
+  pod ‘FBSDKLoginKit’
 end
