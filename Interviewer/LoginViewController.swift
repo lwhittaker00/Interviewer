@@ -59,13 +59,6 @@ class LoginViewController: UIViewController {
     }
     
     
-    func refresh() {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.init(red: 0.60, green: 0.93, blue: 0.60, alpha: 1.0), UIColor.blue.cgColor]
-        gradient.frame = view.layer.bounds
-        view.layer.insertSublayer(gradient, at: 0)
-    }
-
     
     
 }

@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
-import FBSDKCoreKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        let storyboard = UIStoryboard(name: "Login2", bundle: .main)
+        let storyboard = UIStoryboard(name: "Login", bundle: .main)
         
         if let initialViewController = storyboard.instantiateInitialViewController() {
             
@@ -31,12 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options [UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: [UIApplicationOpenURLOptionsKey.annotation])
-        
-        return handled
-    }
 
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -63,3 +56,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
